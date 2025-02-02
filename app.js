@@ -32,4 +32,13 @@ function register(){
     alert('Please enter your password.');
     return;
   }
+
+  const user = {fullName, email, password};
+  localStorage.setItem(email, JSON.stringify(user))
+
+  alert('Registration Successfull.')
+
+  document.getElementById('regFullname').value = '';
+  document.getElementById('regEmail').value = '';
+  document.getElementById('regPassword').value = '';
 }
